@@ -132,7 +132,6 @@
     \end{figure}
 \end{frame}
 
-\subsection{Thermal}
 %   ELECTRICAL. -------------------------------------------------------------------------
 \subsection{Electrical Setup}
     \begin{frame}[c]{Electrical - Setup}
@@ -145,7 +144,7 @@
 	
 	\begin{frame}[c]{Electrical - PCBs}
    	   \begin{itemize}
-  			\item PCB A: Power system, motor control and temperature actuator control.
+			\item PCB A: Power system, motor control and temperature actuator control
   			\item PCB B:  Accelerometer, GPS, compass, temperature sensors
   			\item PCB C: Gyroscopes
        \end{itemize}
@@ -200,7 +199,7 @@
                     \item Controlling downlink
                     \item Setting camera settings
                     \item Guiding / Sanity
-                    \item Cut Off
+                    \item Mode transition
                 \end{itemize}
             \end{column}
 
@@ -238,6 +237,13 @@
         \begin{itemize}
             \item Send telecommands
             \item Receive and display telemetry
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}[c]{Software - Risks}
+        \begin{itemize}
+            \item False positives on mode transitions
+            \item Worst case scenario: SSH
         \end{itemize}
     \end{frame}
 
@@ -285,9 +291,8 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Control system - Risks}
-        Maybe about not finding proper PID and Q \& R Kalman values?
+\begin{frame}[c]{Control system - Risks}
+    Maybe about not finding proper PID and Q \& R Kalman values?
 \end{frame}
 %   CAMERA. -----------------------------------------------------------------------------
 \subsection{Cameras} 			% ANJA
@@ -381,8 +386,8 @@
 \subsection{Project schedule}
 \begin{frame}{Project schedule}
     \begin{figure}
-        \includegraphics[width=0.98\linewidth]{images/gantt.png}
-        \caption{Work breakdown structure}
+        \vspace{-.1cm}
+        \includegraphics[height=0.9\textheight]{images/gantt.png}
     \end{figure}
 \end{frame}
 
