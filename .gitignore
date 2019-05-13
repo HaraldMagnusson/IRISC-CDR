@@ -136,7 +136,11 @@ sympy-plots-for-*.tex/
 *.sav
 
 main.pdf
+main.synctex*
 
 *.pdf
 
 !figures/images/Team_structure.pdf
+!figures/images/Gantt_1CDR.pdf
+
+.vscode/
