@@ -270,7 +270,7 @@
         \item<1-> Selection of targets: %\\
         \begin{itemize}
             \item Based on prioritisation parameters (e.\,g. brightness, location)
-            \item Sensor data: star tracker, GPS, magnetometer %\\
+            \item Sensor data: star tracker, GPS %\\
         \end{itemize}
         \item<2-> Tracking of targets: 
         \begin{itemize}
@@ -289,15 +289,17 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{Control system}
+\begin{frame}[c]{Control system}
     \begin{figure}
-        \includegraphics[width=\linewidth]{figures/images/Control_loop.eps}
-        \caption*{Main control loop}
+        \includegraphics[width=\linewidth]{figures/images/Control_loop_v2.eps}
     \end{figure}
 \end{frame}
 
 \begin{frame}[c]{Control system - Risks}
-    Maybe about not finding proper PID and Q \& R Kalman values?
+    \begin{itemize}
+        \item Not being able to choose appropriate PID values and R and Q matrices for the Kalman filter.\\
+        \rotatebox[origin=c]{180}{$\Lsh$} Solutions: Analitical approach; Various tests on both model and prototype; \\ \hspace{58px}Consulation with our mentor, who's a specialist in control field.
+    \end{itemize}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -306,10 +308,10 @@
 \section{Project Management}
 %   TEAM. ---------------------------------------------------------------------------
 \subsection{Team composition}
-\begin{frame}{Team composition}
+\begin{frame}[c]{Team composition}
     \begin{figure}
         \includegraphics[width=\linewidth]{images/Team_structure.pdf}
-        \caption{Work breakdown structure}
+        % \caption{Work breakdown structure}
     \end{figure}
 \end{frame}
 
@@ -325,7 +327,7 @@
 %   BUDGET. -----------------------------------------------------------------------------
 \subsection{Budget}
 
-\begin{frame}{Budget (Expenses)}
+\begin{frame}[c]{Budget (Expenses)}
     \centering
     \footnotesize
     \begin{tabular}{|l|c|c|c|} 
@@ -356,23 +358,23 @@
         Error margin & n/a & n/a & 250  \\
         Travel PDR/CDR & 2 & 500 & 1000 \\
         \hline
-        \textbf{Total} &  &  & \textbf{3942}  \\
+        \textbf{Total projected cost} &  &  & \textbf{3942}  \\
         \hline
     \end{tabular}
 \end{frame}
 
-\begin{frame}{Budget (Funding)}
+\begin{frame}[c]{Budget (Funding)}
     \centering
     \small
     \begin{tabular}{|l|c|c|} 
         \hline
         Source & Amount (\euro) & Limitations   \\ 
         \hline
-        Luleå University of Technology & $\approx1000$ & Hardware and travel \\
+        Luleå University of Technology & $\approx2500$ & Hardware and travel \\
         SNSA & $\approx3000$ & Hardware and travel \\
         Crowdfunding Campaign & TBD & None \\
         \hline
-        \textbf{Total projected income} & \textbf{$\approx4000$} & \\
+        \textbf{Total projected income} & \textbf{$\approx5500$} & \\
         \hline
         \bf{Total projected cost} & \bf{3942} & \\
         \hline
@@ -382,22 +384,38 @@
     %   OUTREACH. ---------------------------------------------------------------------------
 \subsection{Outreach}
 
-    \begin{frame}[c]{Outreach }
-       	Published articles:
-       	\begin{itemize}
-           	\item Mölndals posten
-       	 \end{itemize}
-		Social media:        
-       	\begin{itemize}
-          	\item Website
-            \item Facebook, Instagram and Twitter
-       	\end{itemize}
-       	Planned:
-       	\begin{itemize}
-           	\item University and high school Presentations
-           	\item Local newspapers articles
+\begin{frame}[c]{Outreach}
+    \begin{minipage}[c]{0.40\linewidth}
+        Published articles:
+        \begin{itemize}
+            \item Mölndals posten
         \end{itemize}
-    \end{frame}
+        Social media:        
+        \begin{itemize}
+            \item Website
+            \item Facebook, Instagram and Twitter
+        \end{itemize}
+        Planned:
+        \begin{itemize}
+            \item University and high school Presentations
+            \item Local newspapers articles
+        \end{itemize}
+    \end{minipage}
+    \begin{minipage}[c]{0.30\linewidth}
+        \begin{figure}[]
+            \centering
+            \includegraphics[height=0.9\textheight]{images/facebook.jpg}
+            \label{}
+        \end{figure}
+    \end{minipage}
+    \begin{minipage}[c]{0.25\linewidth}
+        \begin{figure}[]
+            \centering
+            \includegraphics[height=0.9\textheight]{images/twitter.jpg}
+            \label{}
+        \end{figure}
+    \end{minipage}
+\end{frame}
 
 
 %----------------------------------------------------------------------------------------
