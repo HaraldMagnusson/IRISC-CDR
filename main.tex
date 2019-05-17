@@ -101,7 +101,101 @@
 %----------------------------------------------------------------------------------------
 \section{System}
 %   CONSTRUCTION. -----------------------------------------------------------------------
-\subsection{Construction}
+\subsection{Mechanical Design}
+\begin{frame}[c]{Mechanical Design}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_1.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Overview}
+       \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Single arm design. 
+                    \item Aluminium extrusions, standard t-slot fittings and steel plates.
+                    \item Most parts machinable with drill press and band saw. 
+                    \item Center of gravity adjustable.
+                    \item All cables enter the gimbal att one point.
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=1\textheight]{mechanical/overview.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Transmission}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_transmission.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Camera rotator}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Multiple options available for camera field rotator 
+                    \item OPTEC Physx LE 2 inch camera field rotator
+                    \item Field tested and verified, well documented open source solution 
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.5\textheight]{mechanical/19630_3_sm.jpg}
+                     \includegraphics[height=0.5\textheight]{mechanical/derotator.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+    
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Interface}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Base plate stiffness independent of gondola structure
+                    \item Base plate bolted in 3 locations with M8 bolts and T-slot lugs.
+                    \item Remaining connections floating on stiff springs or elastomer dampeners.
+                    \item Redundant connection points to ensure safety
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/interface.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Verification}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item FEM analysis - structural stiffness and integrity
+                    \item Modal analysis
+                    \item Weak points identified in first iteration
+                    \item Solutions are being implemented
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/verification.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+
 %   THERMAL. ----------------------------------------------------------------------------
 
 \subsection{Thermal}
