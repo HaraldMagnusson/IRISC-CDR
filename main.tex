@@ -101,7 +101,101 @@
 %----------------------------------------------------------------------------------------
 \section{System}
 %   CONSTRUCTION. -----------------------------------------------------------------------
-\subsection{Construction}
+\subsection{Mechanical Design}
+\begin{frame}[c]{Mechanical Design}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_1.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Overview}
+       \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Single arm design. 
+                    \item Aluminium extrusions, standard t-slot fittings and steel plates.
+                    \item Most parts machinable with drill press and band saw. 
+                    \item Center of mass adjustable.
+                    \item All cables enter the gimbal att one point.
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=1\textheight]{mechanical/overview.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Transmission}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_transmission.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[c]{Mechanical Design - Camera rotator}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Multiple options available for camera field rotator 
+                    \item OPTEC Physx LE 2 inch camera field rotator
+                    \item Field tested and verified, well documented open source solution 
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.5\textheight]{mechanical/19630_3_sm.jpg}
+                     \includegraphics[height=0.5\textheight]{mechanical/derotator.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+    
+\end{frame}
+
+\begin{frame}[c]{Mechanical Design - Interface}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Base plate stiffness independent of gondola structure
+                    \item Base plate bolted in 3 locations with M8 bolts and T-slot lugs.
+                    \item Remaining connections floating on stiff springs or elastomer dampeners.
+                    \item Redundant connection points to ensure safety
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/interface.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+\begin{frame}[c]{Mechanical Design - Verification}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item FEM analysis - structural stiffness and integrity
+                    \item Modal analysis
+                    \item Weak points identified in first iteration
+                    \item Solutions are being implemented
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/verification.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+
 %   THERMAL. ----------------------------------------------------------------------------
 
 \subsection{Thermal}
@@ -113,10 +207,18 @@
 
 \begin{frame}[c]{Thermal}
     \begin{figure}[h!]
-        \includegraphics[height=.7\textheight]{images/box.png}
-        \includegraphics[height=.7\textheight]{images/mincoheatingpad.png}
+        \centering
+        \includegraphics[height=1\textheight]{images/thermalsystem2.png}
     \end{figure}
 \end{frame}
+
+\begin{frame}[c]{Thermal}
+    \begin{figure}[h!] 
+ 	\includegraphics[height=.7\textheight]{images/mincoheatingpad.png}
+        \includegraphics[height=.7\textheight]{images/mountingmethod.png}
+\end{figure}
+\end{frame}
+ 
 
 \begin{frame}[c]{Thermal}
     \begin{figure}[h!]
@@ -125,6 +227,9 @@
         \includegraphics[height=.7\textheight]{images/peltierelement.png}
     \end{figure}
 \end{frame}
+
+
+
 
 %   ELECTRICAL. -------------------------------------------------------------------------
 \subsection{Electrical Setup}
@@ -531,7 +636,7 @@
 %----------------------------------------------------------------------------------------
 \begin{frame}[c]{Thermal control loop}
     \begin{figure}
-        \includegraphics[width=\textwidth]{figures/images/thermalcontrol.PNG}
+        \includegraphics[width=\textwidth]{figures/images/thermalcontrol.png}
         \caption*{Thermal control loop}
     \end{figure}
 \end{frame}
@@ -627,7 +732,6 @@
         \hline
     \end{tabular}
 \end{frame}
-
 
 %   CAMERA. -----------------------------------------------------------------------------
 \begin{frame}{NIR Camera for the telescope}
@@ -731,4 +835,62 @@
     \end{table}
 \end{frame}
 
+----------------------------------------------------------------
+% Electrical 
+
+
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.6\textwidth]{electrical/Backup-avaliblePower.png}
+           	\caption{Avalible Power on gondola estimation, figure from Bexus Manual}
+        \end{figure}
+    \end{frame}
+    
+    
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.6\textwidth]{electrical/Backup-bexus22temp.png}
+           	\caption{Bexus 22 temperature inside gondola, figure from Bexus Manual}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.6\textwidth]{electrical/PCB_compass.png}
+           	\caption{PCB 1st iteration : Compass}
+        \end{figure}
+    \end{frame}
+
+
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.7\textwidth]{electrical/PCB_GPS.png}
+           	\caption{PCB 1st iteration : GPS}
+        \end{figure}
+    \end{frame}
+    
+    
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.5\textwidth]{electrical/PCB_motorcontroll.png}
+           	\caption{PCB 1st iteration : Motor Control}
+        \end{figure}
+    \end{frame}
+    
+    
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.4\textwidth]{electrical/PCB_buck5v.png}
+           	\caption{PCB 1st iteration : Buck Converter 5V}
+        \end{figure}
+    \end{frame}
+    
+    
+    \begin{frame}[c]{Electrical - Setup}
+   		\begin{figure}[H]
+            \includegraphics[width=.4\textwidth]{electrical/IOextender.png}
+           	\caption{PCB 1st iteration : IO extender}
+        \end{figure}
+    \end{frame}
+    
 \end{document}
