@@ -101,7 +101,101 @@
 %----------------------------------------------------------------------------------------
 \section{System}
 %   CONSTRUCTION. -----------------------------------------------------------------------
-\subsection{Construction}
+\subsection{Mechanical Design}
+\begin{frame}[c]{Mechanical Design}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_1.png}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Overview}
+       \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Single arm design. 
+                    \item Aluminium extrusions, standard t-slot fittings and steel plates.
+                    \item Most parts machinable with drill press and band saw. 
+                    \item Center of gravity adjustable.
+                    \item All cables enter the gimbal att one point.
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=1\textheight]{mechanical/overview.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+\begin{frame}[c]{Mechanical Design - Transmission}
+    \begin{figure}
+        \includegraphics[height=1\textheight]{mechanical/mech_transmission.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Camera rotator}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Multiple options available for camera field rotator 
+                    \item OPTEC Physx LE 2 inch camera field rotator
+                    \item Field tested and verified, well documented open source solution 
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.5\textheight]{mechanical/19630_3_sm.jpg}
+                     \includegraphics[height=0.5\textheight]{mechanical/derotator.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+    
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Interface}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item Base plate stiffness independent of gondola structure
+                    \item Base plate bolted in 3 locations with M8 bolts and T-slot lugs.
+                    \item Remaining connections floating on stiff springs or elastomer dampeners.
+                    \item Redundant connection points to ensure safety
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/interface.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+\begin{frame}[r]{Mechanical Design - Verification}
+    \begin{columns}[t]
+            \begin{column}{.5\textwidth}
+                \begin{itemize}
+                    \item FEM analysis - structural stiffness and integrity
+                    \item Modal analysis
+                    \item Weak points identified in first iteration
+                    \item Solutions are being implemented
+                \end{itemize}
+            \end{column}
+
+            \begin{column}{.5\textwidth}
+                \begin{figure}
+                     \includegraphics[height=0.9\textheight]{mechanical/verification.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+
 %   THERMAL. ----------------------------------------------------------------------------
 
 \subsection{Thermal}
@@ -267,12 +361,12 @@
 
 \begin{frame}{Control system}
     \begin{itemize}
-        \item<1-> Selection of targets: %\\
+        \item<1-> Target selection and acquisition: %\\
         \begin{itemize}
             \item Based on prioritisation parameters (e.\,g. brightness, location)
             \item Sensor data: star tracker, GPS %\\
         \end{itemize}
-        \item<2-> Tracking of targets: 
+        \item<2-> Target tracking: 
         \begin{itemize}
             \item Model of movements of astronomical targets
             \item Sensor data: internal clock, GPS
@@ -297,7 +391,13 @@
 
 \begin{frame}[c]{Control system - Risks}
     \begin{itemize}
-        \item Not being able to choose appropriate PID values and R and Q matrices for the Kalman filter.\\
+        \item Gyroscope drift error has a strong influence on the system.\\
+        \rotatebox[origin=c]{180}{$\Lsh$} Solutions: 
+        \begin{itemize}
+            \item Add another sensor for sensor fusion.
+            \item Use a better gyroscope.
+        \end{itemize}
+        \item Not being able to choose appropriate PID values or R and Q matrices for the Kalman filter.\\
         \rotatebox[origin=c]{180}{$\Lsh$} Solutions: 
         \begin{itemize}
             \item Analytical approach
@@ -362,36 +462,26 @@
 
 \begin{frame}[c]{Budget (Expenses)}
     \centering
-    \footnotesize
-    \begin{tabular}{|l|c|c|c|} 
+    % \footnotesize
+    \begin{tabular}{|l|c|} 
         \hline
-        Component & Qty & Cost/Unit (\euro) & Cost (\euro)  \\ 
+        Component &  Cost (\euro)  \\ 
         \hline
-        \rowcolor{Gray}
-        \textbf{Structure} &  & \textbf{Total} & \textbf{590}  \\
-        Bearings & TBD & TBD & 200 \\ 
-        \hline
-        \rowcolor{Gray}
-        \textbf{Electronics} &  & \textbf{Total} & \textbf{631.5}  \\
-        Motors & 3 & 21.99 & 66.0  \\
-        Encoders & 2 & 44.2 & 88.4  \\
-        GPS Receiver & 3 & 22.0 & 66.0  \\
-        Various small components & n/a & n/a & 100  \\
-        \hline
+        % \rowcolor{Gray}
+        Structure & 590  \\
+        % \hline
+        % \rowcolor{Gray}
+        Electronics & 607.9  \\
+        % \hline
         
-        \rowcolor{Gray}
-        \textbf{Optical} &  & \textbf{Total} & \textbf{1420.5}  \\
-        Telescope & 1 & 250.5 & 250.5  \\
-        IR Camera & 1 & 800 & 800  \\
-        Guiding Camera & 1 & 320 & 320  \\
-        \hline
+        % \rowcolor{Gray}
+        Optical & 1444.1  \\
+        % \hline
         
-        \rowcolor{Gray}
-        \textbf{Other} &  & \textbf{Total} & \textbf{1300}  \\
-        Error margin & n/a & n/a & 250  \\
-        Travel PDR/CDR & 2 & 500 & 1000 \\
+        % \rowcolor{Gray}
+        Other & 1300  \\
         \hline
-        \textbf{Total projected cost} &  &  & \textbf{3942}  \\
+        \textbf{Total projected cost} & \textbf{3942}  \\
         \hline
     \end{tabular}
 \end{frame}
@@ -403,11 +493,11 @@
         \hline
         Source & Amount (\euro) & Limitations   \\ 
         \hline
-        Luleå University of Technology & $\approx2500$ & Hardware and travel \\
+        Luleå University of Technology & $\approx1000$ & Hardware and travel \\
         SNSA & $\approx3000$ & Hardware and travel \\
         Crowdfunding Campaign & TBD & None \\
         \hline
-        \textbf{Total projected income} & \textbf{$\approx5500$} & \\
+        \textbf{Total projected income} & \textbf{$\approx4000$} & \\
         \hline
         \bf{Total projected cost} & \bf{3942} & \\
         \hline
@@ -535,17 +625,17 @@
 %----------------------------------------------------------------------------------------
 \begin{frame}[c]{Thermal control loop}
     \begin{figure}
-        \includegraphics[width=\textwidth]{figures/images/Thermal_control.eps}
+        \includegraphics[width=\textwidth]{figures/images/thermalcontrol.PNG}
         \caption*{Thermal control loop}
     \end{figure}
 \end{frame}
 
-\begin{frame}
-    \frametitle{Control system resolutions}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-\end{frame}
+% \begin{frame}
+%     \frametitle{Control system resolutions}
+%     \begin{itemize}
+%         \item 
+%     \end{itemize}
+% \end{frame}
 
 \begin{frame}{Budget (1)}
     \centering
@@ -576,7 +666,7 @@
         Component & Qty & Cost/Unit (\euro) & Cost (\euro)  \\ 
         \hline
         \rowcolor{Gray}
-        \textbf{Electronics (part 1)} &  &  & \textbf{631.5}  \\ 
+        \textbf{Electronics (part 1)} &  &  & \textbf{607.9}  \\ 
         Raspberry Pi 3 B+ & 1 & 29.5 & 29.5  \\
         Raspberry Pi Zero & 1 & 22.6 & 22.6  \\
         Peltier element & 1 & 35.2 & 35.2  \\
@@ -597,8 +687,7 @@
         Component & Qty & Cost/Unit (\euro) & Cost (\euro)  \\ 
         \hline
         \rowcolor{Gray}
-        \textbf{Electronics (part 2)} &  &  & \textbf{631.5}  \\ 
-        Raspberry Pi Camera V2 & 1 & 23.6 & 23.6  \\ 
+        \textbf{Electronics (part 2)} &  &  & \textbf{607.9}  \\ 
         ADC & 1 & 18.3 & 18.3  \\ 
         ADC & 1 & 4.8 & 4.8  \\
         SD-card 32GB & 2 & 21.5 & 43  \\
@@ -615,11 +704,12 @@
         Component & Qty & Cost/Unit (\euro) & Cost (\euro)  \\ 
         \hline
         \rowcolor{Gray}
-        \textbf{Optical} &  &  & \textbf{1420.5}  \\
+        \textbf{Optical} &  &  & \textbf{1444.1}  \\
         Telescope & 1 & 250.5 & 250.5  \\
         IR Camera & 1 & 800 & 800  \\
         Guiding Camera & 1 & 320 & 320  \\
         Camera mounting adapter & 1 & 50 & 50 \\
+        Raspberry Pi Camera V2 & 1 & 23.6 & 23.6  \\ 
         \hline
         \rowcolor{Gray}
         \textbf{Other} &  &  & \textbf{1300}  \\
